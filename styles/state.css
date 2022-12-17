@@ -78,3 +78,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+#menu {
+    display: inline-block;
+}

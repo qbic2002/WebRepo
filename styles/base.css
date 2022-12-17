@@ -16,11 +16,11 @@ table {
     display: grid;
 }
 
-tr:nth-child(2n){
+tr:nth-child(2n) {
     background-color: aqua;
 }
 
-tr:nth-child(1){
+tr:nth-child(1) {
     background-color: aquamarine;
 }
 
@@ -30,4 +30,16 @@ td img {
 
 td {
     text-align: left;
+}
+
+nav {
+    z-index: 0;
+    top: 20px;
+    left: 0;
+    position: fixed;
+    width: 20px;
+}
+
+main{
+    display: grid;
 }

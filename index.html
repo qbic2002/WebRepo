@@ -5,9 +5,23 @@
     <meta name="description" content="My live blog">
     <meta name="author" content="Max Golovin">
     <link href="styles/style.css" rel="stylesheet">
+    <script src="scripts/menuScript.js"></script>
     <title>Мой проект</title>
 </head>
-<body>
+<body onload="printLoadTime()">
+<nav>
+    <ul id="menu">
+        <li onmouseleave="reset(this)" onclick="selectMenu(document.getElementById('menu'), this, document.getElementsByTagName('header')[0])">
+            <div>Заголовок</div>
+        </li>
+        <li onmouseleave="reset(this)" onclick="selectMenu(document.getElementById('menu'), this, document.getElementById('ideas_section'))">
+            <div>Идеи (будут актуальны всегда)</div>
+        </li>
+        <li onmouseleave="reset(this)" onclick="selectMenu(document.getElementById('menu'), this, document.getElementById('my_blog_section'))">
+            <div>Блог</div>
+        </li>
+    </ul>
+</nav>
 <header>
     <div id="header_div">
         <div class="inline_div" id="left_img_div"><img class="header_img" src="images/me.jpg" alt="я"></div>
@@ -56,7 +70,7 @@
 
         </div>
     </section>
-    <section>
+    <section id="my_blog_section">
         <div id="my_blog">
             <h3>Мой блог</h3>
         </div>
@@ -78,7 +92,8 @@
                     </tr>
                     <tr>
                         <td>Лион</td>
-                        <td>Хорошо сосёт, много контроля, палец смешной<img src="images/lion.png" alt="Я тут сделал -4 пальцем"></td>
+                        <td>Хорошо сосёт, много контроля, палец смешной<img src="images/lion.png"
+                                                                            alt="Я тут сделал -4 пальцем"></td>
                     </tr>
                     <tr>
                         <td>Дровка</td>
@@ -101,6 +116,10 @@
                     <tr>
                         <td>Гримстроук</td>
                         <td>Связывает, дает сало (если повезет, то без кд), шард очень сильный</td>
+                    </tr>
+                    <tr>
+                        <td>Легионка</td>
+                        <td>Сильная на лайне, вызывает на дуэль</td>
                     </tr>
                 </table>
             </div>
