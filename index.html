@@ -5,9 +5,23 @@
     <meta name="description" content="My live blog">
     <meta name="author" content="Max Golovin">
     <link href="styles/style.css" rel="stylesheet">
+    <script src="scripts/menuScript.js"></script>
     <title>Мой проект</title>
 </head>
-<body>
+<body onload="printLoadTime()">
+<nav>
+    <ul id="menu">
+        <li onmouseleave="reset(this)" onclick="selectMenu(document.getElementById('menu'), this, document.getElementsByTagName('header')[0])">
+            <div>Заголовок</div>
+        </li>
+        <li onmouseleave="reset(this)" onclick="selectMenu(document.getElementById('menu'), this, document.getElementById('ideas_section'))">
+            <div>Идеи (будут актуальны всегда)</div>
+        </li>
+        <li onmouseleave="reset(this)" onclick="selectMenu(document.getElementById('menu'), this, document.getElementById('my_blog_section'))">
+            <div>Блог</div>
+        </li>
+    </ul>
+</nav>
 <header>
     <div id="header_div">
         <div class="inline_div" id="left_img_div"><img class="header_img" src="images/me.jpg" alt="я"></div>
@@ -35,9 +49,80 @@
             </ol>
         </div>
     </div>
-    <section>
+    <section id="ideas_section">
+        <h2 class="middle_header">My brilliant ideas</h2>
+        <div id="ideas">
+            <div class="idea">
+                Выключатели света всегда на одной и той же высоте и с той же стороны от входа
+            </div>
+            <div class="idea">
+                Сделать кнопку "Split all definitions and declarations" в CLion
+            </div>
+            <div class="idea">
+                Сделать возможность нормально центрировать div
+            </div>
+            <div class="idea">
+                Добавить в джаве ссылки на примитивы
+            </div>
+            <div class="idea">
+                Сделать Java и JavaScript одной семьей
+            </div>
+
+        </div>
+    </section>
+    <section id="my_blog_section">
         <div id="my_blog">
             <h3>Мой блог</h3>
+        </div>
+        <div class="blog_post">
+            <time datetime="2022-11-11 1:34">2022-12-17 17:30</time>
+            <div class="blog_content">
+                <table>
+                    <tr>
+                        <th>Мои любимые герои в доте</th>
+                        <th>Почему я их люблю</th>
+                    </tr>
+                    <tr>
+                        <td>Пудж</td>
+                        <td>Есть хук</td>
+                    </tr>
+                    <tr>
+                        <td>Пугна</td>
+                        <td>Классно сосёт, и тинкеры умирают от варда</td>
+                    </tr>
+                    <tr>
+                        <td>Лион</td>
+                        <td>Хорошо сосёт, много контроля, палец смешной<img src="images/lion.png"
+                                                                            alt="Я тут сделал -4 пальцем"></td>
+                    </tr>
+                    <tr>
+                        <td>Дровка</td>
+                        <td>Урон будет вне зависимости от шмоток, бьет башенки</td>
+                    </tr>
+                    <tr>
+                        <td>Омник</td>
+                        <td>Спасает от пуджа, <a href="https://youtube.com/shorts/Fx7r_WuXn5s?feature=share">типичный
+                            школьник из Поволжья</a></td>
+                    </tr>
+                    <tr>
+                        <td>Трент (дерево)</td>
+                        <td>Хилит башенки и домики
+                            <audio controls="controls">
+                                <source src="sounds/Treant_kill.mpeg" type="audio/mpeg">
+                                Тебя убило дерево!
+                            </audio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Гримстроук</td>
+                        <td>Связывает, дает сало (если повезет, то без кд), шард очень сильный</td>
+                    </tr>
+                    <tr>
+                        <td>Легионка</td>
+                        <td>Сильная на лайне, вызывает на дуэль</td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div class="blog_post">
             <time datetime="2022-11-12 7:47">2022-11-12 7:47</time>
@@ -52,7 +137,7 @@
                         (даже <span id="black_text"><del>негров</del></span>)
                     </li>
                     <li>Перечеркивать и подчеркивать текст&#128070;&#127999;</li>
-                    <li><pre><code>#include <iostream>
+                    <li><pre><code>#include &lt;iostream&gt;
 
 int main() {
     std::cout << "Могу вставить код!" << std::endl;
