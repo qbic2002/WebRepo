@@ -21,3 +21,12 @@
     height: inherit;
     width: inherit;
 }
+
+.middle_header {
+    text-align: center;
+}
+
+.idea {
+    border: 1px solid;
+    padding: 2px;
+}

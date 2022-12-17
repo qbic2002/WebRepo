@@ -62,3 +62,19 @@
 .footer_div p {
     margin: 1em 0 0;
 }
+
+#ideas_section {
+    display: flex;
+    float: left;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+#ideas {
+    width: 80%;
+    row-gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
