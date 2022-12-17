@@ -1,0 +1,33 @@
+footer {
+    background-color: white;
+    z-index: 0;
+    position: sticky;
+    bottom: 0;
+    padding-bottom: 1em;
+}
+
+body {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border: 1px solid;
+    display: grid;
+}
+
+tr:nth-child(2n){
+    background-color: aqua;
+}
+
+tr:nth-child(1){
+    background-color: aquamarine;
+}
+
+td img {
+    width: 30%;
+}
+
+td {
+    text-align: left;
+}
