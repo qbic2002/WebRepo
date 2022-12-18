@@ -82,3 +82,8 @@
 #menu {
     display: inline-block;
 }
+
+#form_div {
+    display: flex;
+    justify-content: space-around;
+}

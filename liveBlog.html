@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="My live blog">
+    <meta name="author" content="Max Golovin">
+    <link href="styles/style.css" rel="stylesheet">
+    <script src="scripts/liveBlogScript.js"></script>
+    <title>Мой проект</title>
+</head>
+<body onload="printAllFromLocalStorage()">
+<div id="form_div">
+    <form onsubmit="formHandler(this); return false;">
+        <label>
+            Текст:
+            <input type="text" id="form_text" value=""/>
+        </label>
+        <input type="submit">
+    </form>
+</div>
+<section id="my_blog_section">
+    <div id="my_blog">
+        <h3>Твой лайв блог</h3>
+    </div>
+</section>
+<footer>
+    <div class="footer_div">
+        <p>Вернуться на главную <a href="index.html">тут</a></p>
+    </div>
+</footer>
+</body>
+</html>
