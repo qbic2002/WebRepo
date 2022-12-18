@@ -46,7 +46,10 @@ function printBlogPost(blogPost) {
     div.setAttribute('class', 'blog_post')
     let time = document.createElement('datetime');
     blogPost.date = new Date(blogPost.date)
-    let timeString = blogPost.date.getFullYear() + '-' + blogPost.date.getMonth() + '-' + blogPost.date.getDate() + ' ' + blogPost.date.getHours() + ':' + blogPost.date.getMinutes();
+    let hours = blogPost.date.getHours().toString().length === 1 ? '0' + blogPost.date.getHours().toString() : blogPost.date.getHours().toString();
+    let minutes = blogPost.date.getMinutes().toString().length === 1 ? '0' + blogPost.date.getMinutes().toString() : blogPost.date.getMinutes().toString();
+
+    let timeString = blogPost.date.getFullYear() + '-' + blogPost.date.getMonth() + '-' + blogPost.date.getDate() + ' ' + hours + ':' + minutes;
     time.datetime = timeString;
     time.innerText = timeString;
     let content = document.createElement("div");
