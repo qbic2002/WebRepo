@@ -97,6 +97,8 @@
 
 #rand_anek {
     display: none;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 #loading_gif {
