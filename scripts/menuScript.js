@@ -36,10 +36,19 @@ function reset(elem) {
     elem.children[0].style.background = '';
 }
 
-function nextJoke(){
+function nextJoke() {
     jokeArea = document.getElementById('rand_anek');
+    loadingGif = document.getElementById('loading_gif');
+
+    jokeArea.style.display = "none"
+    loadingGif.style.display = "block"
+
     jokeArea.innerText = 'Штука грузится...(это не шутка)';
     fetch('https://geek-jokes.sameerkumar.website/api?format=json')
         .then(response => response.json())
-        .then(json => jokeArea.innerText = json.joke)
+        .then(json => {
+            jokeArea.innerText = json.joke
+            loadingGif.style.display = "none"
+            jokeArea.style.display = "block"
+        }, () => jokeArea.innerText = "Шутки кончились")
 }

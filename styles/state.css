@@ -94,3 +94,11 @@
     align-items: center;
     row-gap: 10px;
 }
+
+#rand_anek {
+    display: none;
+}
+
+#loading_gif {
+    width: 75px;
+}
