@@ -50,5 +50,9 @@ function nextJoke() {
             jokeArea.innerText = json.joke
             loadingGif.style.display = "none"
             jokeArea.style.display = "block"
-        }, () => jokeArea.innerText = "Шутки кончились")
+        }, () => {
+            jokeArea.innerText = "Шутки кончились"
+            loadingGif.style.display = "none"
+            jokeArea.style.display = "block"
+        })
 }
