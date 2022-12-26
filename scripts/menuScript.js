@@ -56,3 +56,12 @@ function nextJoke() {
             jokeArea.style.display = "block"
         })
 }
+
+var treant = ""
+function loadSound(soundUrl, v) {
+    createjs.Sound.registerSound(soundUrl, v);
+}
+
+function playSound(elem, v) {
+    createjs.Sound.play(v)
+}

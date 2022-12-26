@@ -104,3 +104,11 @@
 #loading_gif {
     width: 75px;
 }
+
+#treant_audio {
+    width: 15px;
+}
+
+#treant_audio:hover {
+    background-color: chartreuse;
+}
