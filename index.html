@@ -8,7 +8,9 @@
     <script src="scripts/menuScript.js"></script>
     <title>Мой проект</title>
 </head>
-<body onload="printLoadTime(); nextJoke()">
+
+<script src='https://code.createjs.com/soundjs-0.6.2.min.js'></script>
+<body onload="printLoadTime(); nextJoke(); loadSound('../sounds/Treant_kill.mpeg', treant)">
 <nav>
     <ul id="menu">
         <li onmouseleave="reset(this)" onclick="selectMenu(document.getElementById('menu'), this, document.getElementsByTagName('header')[0])">
@@ -113,10 +115,7 @@
                     <tr>
                         <td>Трент (дерево)</td>
                         <td>Хилит башенки и домики
-                            <audio controls="controls">
-                                <source src="sounds/Treant_kill.mpeg" type="audio/mpeg">
-                                Тебя убило дерево!
-                            </audio>
+                            <img id="treant_audio" onclick="playSound(this, treant)" src="images/play_button.png">
                         </td>
                     </tr>
                     <tr>
